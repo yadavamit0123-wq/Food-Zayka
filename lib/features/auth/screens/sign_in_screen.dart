@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:stackfood_multivendor/common/widgets/custom_asset_image_widget.dart';
 import 'package:stackfood_multivendor/util/color_resources.dart';
+import 'package:stackfood_multivendor/util/images.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter/services.dart';
@@ -104,6 +106,15 @@ class SignInScreenState extends State<SignInScreen> {
                         ),
                       ),
                     ]) : const SizedBox.shrink(),
+                    const SizedBox(height: Dimensions.paddingLarge),
+
+                    const Center(
+                      child: CustomAssetImageWidget(
+                        Images.logo,
+                        width: 220,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
                     const SizedBox(height: Dimensions.paddingLarge),
 
                     ResponsiveHelper.isDesktop(context) ? Align(

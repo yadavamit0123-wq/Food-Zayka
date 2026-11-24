@@ -8,7 +8,6 @@ import 'package:stackfood_multivendor/features/splash/controllers/splash_control
 import 'package:stackfood_multivendor/features/splash/domain/models/deep_link_body.dart';
 import 'package:stackfood_multivendor/helper/address_helper.dart';
 import 'package:stackfood_multivendor/util/color_resources.dart';
-import 'package:stackfood_multivendor/util/dimensions.dart';
 import 'package:stackfood_multivendor/util/images.dart';
 import 'package:flutter/material.dart';
 import 'package:stackfood_multivendor/common/widgets/custom_asset_image_widget.dart';
@@ -83,13 +82,10 @@ class SplashScreenState extends State<SplashScreen> {
       key: _globalKey,
       body: GetBuilder<SplashController>(builder: (splashController) {
         return Center(
-          child: splashController.hasConnection ? Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              CustomAssetImageWidget(Images.logo, width: 40, height: 40,),
-              const SizedBox(width: Dimensions.padding2xSmall),
-              CustomAssetImageWidget(Images.logoName, width: 150),
-            ],
+          child: splashController.hasConnection ? const CustomAssetImageWidget(
+            Images.logo,
+            width: 240,
+            fit: BoxFit.contain,
           ) : NoInternetScreen(child: SplashScreen(notificationBody: widget.notificationBody, linkBody: widget.linkBody)),
         );
       }),

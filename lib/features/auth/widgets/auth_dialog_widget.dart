@@ -50,11 +50,11 @@ class AuthDialogWidgetState extends State<AuthDialogWidget> {
                 padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingOverLarge),
                 child: Column(children: [
 
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                    CustomAssetImageWidget(Images.logo, height: 40, width: 40),
-                    const SizedBox(width: Dimensions.padding2xSmall),
-                    CustomAssetImageWidget(Images.logoName, height: 50, width: 120),
-                  ]),
+                  const CustomAssetImageWidget(
+                    Images.logo,
+                    width: 220,
+                    fit: BoxFit.contain,
+                  ),
                   const SizedBox(height: Dimensions.paddingLarge),
 
                   SignInView(exitFromApp: widget.exitFromApp, backFromThis: widget.backFromThis,

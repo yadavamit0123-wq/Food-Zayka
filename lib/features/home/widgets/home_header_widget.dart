@@ -28,7 +28,7 @@ class _HomeHeaderWidgetState extends State<HomeHeaderWidget> {
         padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingLarge, vertical: Dimensions.paddingSmall),
         child: Row(spacing: Dimensions.paddingSmall, children: [
 
-          CustomAssetImageWidget(Images.logo, height: 36, width: 36),
+          CustomAssetImageWidget(Images.logo, height: 42, width: 120, fit: BoxFit.contain),
 
           Expanded(child: InkWell(
             onTap: () async{
